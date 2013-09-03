@@ -18,7 +18,7 @@ DATABASES = {
 }
 
 INSTALLED_APPS += (
-    'debug_toolbar',
+    'debug_jenkins',
 )
 
 JENKINS_TASKS = (
