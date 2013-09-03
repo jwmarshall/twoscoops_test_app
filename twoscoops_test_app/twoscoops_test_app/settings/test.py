@@ -18,7 +18,7 @@ DATABASES = {
 }
 
 INSTALLED_APPS += (
-    'debug_jenkins',
+    'django_jenkins',
 )
 
 JENKINS_TASKS = (
