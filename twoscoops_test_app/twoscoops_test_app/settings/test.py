@@ -16,3 +16,13 @@ DATABASES = {
         "PORT": "",
     },
 }
+
+INSTALLED_APPS += (
+    'debug_toolbar',
+)
+
+JENKINS_TASKS = (
+    'django_jenkins.tasks.run_pylint',
+    'django_jenkins.tasks.with_coverage',
+    'django_jenkins.tasks.django_tests',
+)
