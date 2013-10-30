@@ -9,6 +9,7 @@ install:
   - sudo apt-get update
 #  - sudo apt-get -y install linux-headers-$(uname -r)
   - sudo apt-get -y install virtualbox-4.2
+  - sudo service virtualbox start
   - VBoxManage -v
   - wget http://files.vagrantup.com/packages/7ec0ee1d00a916f80b109a298bab08e391945243/vagrant_1.2.7_x86_64.deb
   - sudo dpkg -i vagrant_1.2.7_x86_64.deb
