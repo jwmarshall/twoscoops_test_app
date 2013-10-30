@@ -1,8 +1,8 @@
 language: ruby
 rvm:
   - 1.9.3
-gemfile:
-  - Gemfile
+#gemfile:
+#  - Gemfile
 install:
   - sudo echo "deb http://download.virtualbox.org/virtualbox/debian precise contrib" | sudo tee -a /etc/apt/sources.list
   - wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
@@ -10,7 +10,10 @@ install:
 #  - sudo apt-get -y install linux-headers-$(uname -r)
   - sudo apt-get -y install virtualbox-4.2
   - VBoxManage -v
-  - bundle
+  - wget http://files.vagrantup.com/packages/7ec0ee1d00a916f80b109a298bab08e391945243/vagrant_1.2.7_x86_64.deb
+  - dpkg -i vagrant_1.2.7_x86_64.deb
+  - vagrant plugin install vagrant-berkshelf
+  - vagrant plugin install vagrant-omnibus
 script:
   - vagrant up
   - vagrant destory -f
